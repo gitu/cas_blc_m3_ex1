@@ -25,6 +25,10 @@ public class Transaction {
          else
             signature = Arrays.copyOf(sig, sig.length);
       }
+
+      public  UTXO buildUTXO() {
+         return new UTXO(prevTxHash, outputIndex);
+      }
    }
 
    public class Output {
